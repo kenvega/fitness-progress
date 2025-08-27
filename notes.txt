@@ -1,0 +1,9 @@
+A 12–16 character random password + PBKDF2 200k iterations is very safe for personal use (effectively unbreakable for decades)
+
+general command to encrypt a file
+  openssl enc -aes-256-cbc -salt -pbkdf2 -iter 200000 -in "original/photo.jpg" -out "encrypted/photo.jpg.enc"
+
+to encrypt new photos added in 'original' folder
+  ./scripts/encrypt_files.sh
+
+first encrypt, then commit
